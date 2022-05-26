@@ -1,6 +1,6 @@
 ## Welcome to Hima's Portfolio
 
-### Project : Cyclistic bike-share analysis - Google Data Analytics Capstone
+### Project 1: Cyclistic bike-share analysis - Google Data Analytics Capstone
 
 
 **Business Task**
@@ -23,4 +23,14 @@ References:
 [BikeShare - PDF](https://github.com/hmjreddy/Hima_Portfolio/blob/1d46ec4af0d1468137e7bd39472f73cb9becc4f3/Case-Study-Cyclistic%20Bike-Share.pdf)
 
 
+### Project 2: SuperStore Sales and Profit Analysis - Tableau
 
+**Business Task:**
+
+Sales and Profit analysis of the SuperStore data.
+
+- Where is Data located?
+      - [SuperStore Sales - Tableau Resources](https://public.tableau.com/en-us/s/resources?qt-overview_resources=1#qt-overview_resources)
+
+- **Tools used:**
+    - [Tableau](https://public.tableau.com/views/SuperStore-SalesandProfit_16519629296210/SuperStore-ProfitAnalysis?:language=en-US&:display_count=n&:origin=viz_share_link)    (Visualizations)
