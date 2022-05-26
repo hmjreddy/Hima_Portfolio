@@ -1,37 +1,26 @@
-## Welcome to GitHub Pages
+## Welcome to Hima's Portfolio
 
-You can use the [editor on GitHub](https://github.com/hmjreddy/Hima_Portfolio/edit/main/README.md) to maintain and preview the content for your website in Markdown files.
+### Project : Cyclistic bike-share analysis - Google Data Analytics Capstone
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
-### Markdown
+**Business Task**
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+How do annual members and casual riders use Cyclistic bikes differently?
 
-```markdown
-Syntax highlighted code block
 
-# Header 1
-## Header 2
-### Header 3
+- Where is your data located? 
+   - 	https://divvy-tripdata.s3.amazonaws.com/index.html
+   (I have used 2021 year data from divvy-tripdata for the analysis.)
+ 
+ (Note: The datasets have a different name because Cyclistic is a fictional company. For the purposes of this case study, the datasets are appropriate and will enable you to answer the business questions. The data has been made available by Motivate International Inc. under this [license](https://ride.divvybikes.com/data-license-agreement).) 
 
-- Bulleted
-- List
+- **Tools used:**
+    -  [R](https://github.com/hmjreddy/Hima_Portfolio/blob/58decdfb5a5073a1f7712ef0a8890dda3fa2100a/Cyclist_Capstone.Rmd)     (for merging the files and data cleaning)
+    - [Tableau](https://public.tableau.com/views/Cyclisticbike-shareanalysis-GoogleDataAnalyticsCapstone/Cyclisticbike-shareanalysis?:language=en-US&publish=yes&:display_count=n&:origin=viz_share_link)    (creating Calculated fields and Visualizations)
+      
 
-1. Numbered
-2. List
+References:
+[BikeShare - PDF](https://github.com/hmjreddy/Hima_Portfolio/blob/1d46ec4af0d1468137e7bd39472f73cb9becc4f3/Case-Study-Cyclistic%20Bike-Share.pdf)
 
-**Bold** and _Italic_ and `Code` text
 
-[Link](url) and ![Image](src)
-```
 
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/hmjreddy/Hima_Portfolio/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
