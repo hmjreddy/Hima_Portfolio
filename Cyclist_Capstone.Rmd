@@ -1,0 +1,114 @@
+---
+title: "Cyclist_Capstone"
+author: "Hima"
+date: '2022-05-23'
+---
+
+```{r setup, include= TRUE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+### Install packages
+```{r}
+#install.packages("tidyverse")
+#install.packages("lubridate")
+#install.packages("janitor")
+library(tidyverse)
+library(lubridate)
+library(janitor)
+```
+
+### Importing Data (CSV files)
+
+```{r}
+Tripdata_Jan21 <- read_csv('Tripdata_Jan21.csv')
+Tripdata_Feb21 <- read_csv('Tripdata_Feb21.csv')
+Tripdata_Mar21 <- read_csv('Tripdata_Mar21.csv')
+Tripdata_Apr21 <- read_csv('Tripdata_Apr21.csv')
+Tripdata_May21 <- read_csv('Tripdata_May21.csv')
+Tripdata_Jun21 <- read_csv('Tripdata_Jun21.csv')
+Tripdata_Jul21 <- read_csv('Tripdata_Jul21.csv')
+Tripdata_Aug21 <- read_csv('Tripdata_Aug21.csv')
+Tripdata_Sep21 <- read_csv('Tripdata_Sep21.csv')
+Tripdata_Oct21 <- read_csv('Tripdata_Oct21.csv')
+Tripdata_Nov21 <- read_csv('Tripdata_Nov21.csv')
+Tripdata_Dec21 <- read_csv('Tripdata_Dec21.csv')
+```
+
+
+### Checking the COLUMN Names and no. of columns of the files imported
+
+```{r}
+colnames(Tripdata_Jan21)
+colnames(Tripdata_Feb21)
+colnames(Tripdata_Mar21)
+colnames(Tripdata_Apr21)
+colnames(Tripdata_May21)
+colnames(Tripdata_Jun21)
+colnames(Tripdata_Jul21)
+colnames(Tripdata_Aug21)
+colnames(Tripdata_Sep21)
+colnames(Tripdata_Oct21)
+colnames(Tripdata_Nov21)
+colnames(Tripdata_Dec21)
+```
+
+### Check the Data Type of each Column of all the files
+```{r}
+str(Tripdata_Jan21)
+str(Tripdata_Feb21)
+str(Tripdata_Mar21)
+str(Tripdata_Apr21)
+str(Tripdata_May21)
+str(Tripdata_Jun21)
+str(Tripdata_Jul21)
+str(Tripdata_Aug21)
+str(Tripdata_Sep21)
+str(Tripdata_Oct21)
+str(Tripdata_Nov21)
+str(Tripdata_Dec21)
+```
+
+### Checking Column Names of all the files
+```{r}
+compare_df_cols(Tripdata_Jan21, Tripdata_Feb21, Tripdata_Mar21, Tripdata_Apr21, Tripdata_May21, Tripdata_Jun21, Tripdata_Jul21, Tripdata_Aug21, Tripdata_Sep21, Tripdata_Oct21, Tripdata_Nov21, Tripdata_Dec21, return  = "mismatch")
+
+```
+
+### Merge all files (12 months data) to single file
+
+```{r}
+Tripdata_2021 <- rbind(Tripdata_Jan21, Tripdata_Feb21, Tripdata_Mar21, Tripdata_Apr21, Tripdata_May21, Tripdata_Jun21, Tripdata_Jul21, Tripdata_Aug21, Tripdata_Sep21, Tripdata_Oct21, Tripdata_Nov21, Tripdata_Dec21)
+
+```
+
+### Finding missing values in Columns (https://www.codingprof.com/3-ways-to-find-columns-with-nas-in-r-examples/)
+```{r}
+colSums(is.na(Tripdata_2021))
+```
+
+### Remove/Drop missing data from data frame
+```{r}
+Tripdata_2021 <- Tripdata_2021 %>% drop_na()
+dim(Tripdata_2021)
+```
+
+### Checking for duplicate data
+```{r}
+duplicate_check <- distinct(Tripdata_2021, ride_id, .keep_all = TRUE)
+dim(duplicate_check)
+
+```
+
+### removing unwanted columns 'start_lat', 'start_lng', 'end_lat', 'end_lng' from data frame
+```{r}
+Tripdata_2021 <- Tripdata_2021 %>% select(-c('start_lat', 'start_lng', 'end_lat', 'end_lng'))
+```
+
+### Exporting the file in CSV format
+```{r}
+write.csv(Tripdata_2021, "Tripdata_2021.csv")
+
+```
+
+
